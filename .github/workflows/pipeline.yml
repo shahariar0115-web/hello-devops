@@ -10,22 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-name: CI Pipeline
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  ci:
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Print files
-        run: |
-          echo "Listing project files"
-          ls -la      - name: Checkou
+      - name: Show files
+        run: ls -la
