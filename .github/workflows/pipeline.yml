@@ -13,6 +13,24 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Show files
+        run: |
+          echo "Listing project files"
+          ls -laname: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Show project files
         run: ls -laname: CI/CD Pipeline
 
